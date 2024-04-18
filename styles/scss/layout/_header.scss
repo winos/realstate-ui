@@ -2,12 +2,17 @@
  --------- (4.1) header styles start ---------
  ==== */
 
+
+ //alinea el  menu al centro
+
+
+
 header {
   position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
-  background-color: transparent;
+  background-color: #ffffff;
   z-index: 99;
   transition: $primary-transition;
 }
@@ -22,8 +27,9 @@ header {
 }
 
 .navbar {
+
   padding: 23px 0px;
-  background-color: transparent;
+  background-color: #ffffff;;
   @include responsive(laptop) {
     padding: 24px 0px;
   }
@@ -46,14 +52,14 @@ header {
 }
 
 .logo {
-  max-width: 140px;
+  max-width: 60px;
   height: auto;
   @include responsive(xl) {
-    height: 40px;
+    height: auto;
   }
   @include responsive(sm) {
-    max-width: 130px;
-    height: 38px;
+    max-width: 60px;
+    height: auto;
   }
 }
 
@@ -94,6 +100,9 @@ header {
 }
 
 .navbar-collapse {
+  margin: 0 auto !important;
+  justify-content: center;
+  max-width: 960px;
   margin-left: 60px;
   @include responsive(xl) {
     margin-left: 40px;
@@ -150,6 +159,8 @@ header {
 }
 
 .nav-link {
+  align-items: center;
+  align-content: center;
   color: $primary-color;
   font-weight: 600;
   padding: 8px 10px !important;
@@ -297,6 +308,8 @@ header {
 }
 
 .navbar-toggler {
+  align-items: center;
+  align-content: center;
   border: none;
   padding: 0px;
   line-height: 0px;

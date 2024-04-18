@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { HiArrowNarrowRight } from "react-icons/hi";
+import { HiArrowNarrowRight, HiSearch } from "react-icons/hi";
 import { navData } from "./navData";
 import logo from "/public/images/logo.png";
 
@@ -49,8 +49,8 @@ const NavBar = () => {
                 href="/registration"
                 className="button button--effect d-none d-sm-inline-flex"
               >
-                Join Now
-                <HiArrowNarrowRight className="fs-4" />
+              Encuentra la inversion ideal 
+              <HiSearch className="fs-4" />
               </Link>
             </div>
             <button

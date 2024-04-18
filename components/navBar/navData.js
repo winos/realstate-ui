@@ -1,51 +1,18 @@
 export const navData = [
   {
     id: "m@01",
-    itm: "Home",
+    itm: "Lotus",
     url: "/#",
-    dropdown: true,
-    dropdown_itms: [
-      {
-        id: "dp@11",
-        dp_itm: "Home One",
-        url: "/",
-      },
-      {
-        id: "dp@12",
-        dp_itm: "Home Two",
-        url: "/index-two",
-      },
-      {
-        id: "dp@13",
-        dp_itm: "Home Three",
-        url: "/index-three",
-      },
-    ],
+    dropdown: false,
+    
   },
   {
     id: "m@02",
-    itm: "Properties",
+    itm: "Propiedades",
     url: "/#",
-    dropdown: true,
-    dropdown_itms: [
-      {
-        id: "dp@21",
-        dp_itm: "Properties",
-        url: "/property",
-      },
-      {
-        id: "dp@22",
-        dp_itm: "Property Details",
-        url: "/property/{id}",
-      },
-      {
-        id: "dp@23",
-        dp_itm: "Property Alert",
-        url: "/property/alert",
-      },
-    ],
+    
   },
-  {
+  /*/{
     id: "m@03",
     itm: "Loan",
     url: "/#",
@@ -67,16 +34,16 @@ export const navData = [
         url: "/business-loan/application",
       },
     ],
-  },
+  },/*/
   {
     id: "m@04",
-    itm: "List your property",
+    itm: "Lotus Fraction",
     url: "/list-your-property",
     dropdown: false,
   },
   {
     id: "m@05",
-    itm: "Pages",
+    itm: "Servicios",
     url: "/#",
     dropdown: true,
     dropdown_itms: [
@@ -164,7 +131,7 @@ export const navData = [
   },
   {
     id: "m@06",
-    itm: "Contact",
+    itm: "Contacto",
     url: "/contact-us",
     dropdown: false,
   },
