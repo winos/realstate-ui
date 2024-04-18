@@ -12,7 +12,7 @@ const Hero = () => {
               <div className="hero__content">
                 <h5 className="neutral-top">A smarter, better way to invest</h5>
                 <h1>
-                  Real Estate Investment For <span>Everyone</span>{" "}
+                  Real Estate Investment For <span>TINY CATS</span>{" "}
                 </h1>
                 <p className="primary neutral-bottom">
                   Buy shares of rental properties, earn monthly income, and

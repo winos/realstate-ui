@@ -1,6 +1,36 @@
 import Link from "next/link";
+import { useState } from 'react';
 
 const RegistrationForm = () => {
+  const [response, setResponse] = useState(null);
+
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget)
+    console.log(formData);
+    
+    try {
+      const res = await fetch('http://localhost:3001/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        setResponse(data.message);
+      } else {
+        setResponse('Error al registrar');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setResponse('Error al conectar con el servidor');
+    }
+  };
+
   return (
     <section className="registration clear__top">
       <div className="container">
@@ -9,13 +39,13 @@ const RegistrationForm = () => {
           <p>
             Already Registered? <Link href="/login">Login</Link>
           </p>
-          <form name="registration__form">
+          <form name="registration__form" onSubmit={handleSubmit}>
             <div className="regi__type">
               <label htmlFor="typeSelect">You are?</label>
               <div className="type__select select px-1 px-sm-3">
                 <select className="w-100 h-100 text-capitalize" id="typeSelect">
-                  <option value="particular">Particular</option>
-                  <option value="individual">Individual</option>
+                  <option value="Agente">Agente</option>
+                  <option value="Inversor">Inversor</option>
                 </select>
               </div>
             </div>
@@ -25,7 +55,7 @@ const RegistrationForm = () => {
                   <label htmlFor="firstName">First Name*</label>
                   <input
                     type="text"
-                    name="first__name"
+                    name="name"
                     id="firstName"
                     placeholder="First Name"
                     required="required"
@@ -37,7 +67,7 @@ const RegistrationForm = () => {
                   <label htmlFor="lastName">Last Name*</label>
                   <input
                     type="text"
-                    name="last__name"
+                    name="lastname"
                     id="lastName"
                     placeholder="Last Name"
                     required="required"
@@ -49,7 +79,7 @@ const RegistrationForm = () => {
               <label htmlFor="registrationMail">Email*</label>
               <input
                 type="email"
-                name="registration__email"
+                name="email"
                 id="registrationMail"
                 placeholder="Enter your email"
                 required="required"
@@ -61,7 +91,7 @@ const RegistrationForm = () => {
                   <label htmlFor="regiPass">Password*</label>
                   <input
                     type="password"
-                    name="regi__pass"
+                    name="password"
                     id="regiPass"
                     placeholder="Password"
                     required="required"
@@ -73,7 +103,7 @@ const RegistrationForm = () => {
                   <label htmlFor="passCon">Password Confirmation*</label>
                   <input
                     type="password"
-                    name="pass__con"
+                    name="pass__conf"
                     id="passCon"
                     placeholder="Password Confirm"
                     required="required"
@@ -86,7 +116,7 @@ const RegistrationForm = () => {
                 <input
                   type="checkbox"
                   id="condtion"
-                  name="accept__condition"
+                  name="acceptterms"
                   value="agree"
                   required
                 />
@@ -100,6 +130,7 @@ const RegistrationForm = () => {
               </button>
             </div>
           </form>
+           {response && <p>{response}</p>}
         </div>
       </div>
     </section>
