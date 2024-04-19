@@ -41,7 +41,7 @@ export const navData = [
     url: "/list-your-property",
     dropdown: false,
   },
-  {
+  /*/{
     id: "m@05",
     itm: "Servicios",
     url: "/#",
@@ -128,7 +128,7 @@ export const navData = [
         url: "/404",
       },
     ],
-  },
+  },/*/
   {
     id: "m@06",
     itm: "Contacto",
