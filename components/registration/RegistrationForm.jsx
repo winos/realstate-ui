@@ -7,16 +7,22 @@ const RegistrationForm = () => {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    const formData = new FormData(e.currentTarget)
-    console.log(formData);
+    const formData = new FormData(e.target)
+    const data = {
+      name : formData.get("name"),
+      lastname : formData.get("lastname"),
+      email : formData.get("email"),
+      password : formData.get("password"),
+      terms : formData.get("terms")
+    }
     
     try {
-      const res = await fetch('http://localhost:3001/register', {
+      const res = await fetch('http://localhost:5000/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(data)
       });
 
       if (res.ok) {
@@ -56,7 +62,7 @@ const RegistrationForm = () => {
                   <input
                     type="text"
                     name="name"
-                    id="firstName"
+                    id="name"
                     placeholder="First Name"
                     required="required"
                   />
@@ -103,7 +109,7 @@ const RegistrationForm = () => {
                   <label htmlFor="passCon">Password Confirmation*</label>
                   <input
                     type="password"
-                    name="pass__conf"
+                    name="passCon"
                     id="passCon"
                     placeholder="Password Confirm"
                     required="required"
@@ -115,7 +121,7 @@ const RegistrationForm = () => {
               <label>
                 <input
                   type="checkbox"
-                  id="condtion"
+                  id="acceptterms"
                   name="acceptterms"
                   value="agree"
                   required
