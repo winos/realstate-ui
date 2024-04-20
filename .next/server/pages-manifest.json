@@ -1,10 +1,15 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+<<<<<<< HEAD
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
   "/404": "pages/404.js",
   "/dashboard/property": "pages/dashboard/property.js",
   "/login": "pages/login.js",
   "/registration": "pages/registration.js"
+=======
+  "/registration": "pages/registration.js",
+  "/": "pages/index.js"
+>>>>>>> e724dd35b58f7bb998fe19a929fc4193b1d5df19
 }

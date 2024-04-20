@@ -51,6 +51,7 @@
     width: 196px;
     padding: 14px 30px;
     height: 60px;
+    
     @include responsive(lg) {
       width: 170px;
       height: auto;
