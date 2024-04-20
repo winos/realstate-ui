@@ -10,27 +10,39 @@ const Hero = () => {
           <div className="row">
             <div className="col-lg-6 col-xxl-5">
               <div className="hero__content">
-                <h5 className="neutral-top">A smarter, better way to invest</h5>
-                <h1>
-                  Real Estate Investment For <span>TINY CATS</span>{" "}
-                </h1>
+                <h5 className="neutral-top">Encuentra tu inversión ideal</h5>
+                <p style={{ marginBottom: '2rem' }}></p>
+                <h3>
+                 Invierte en tu casa ideal <span> o compra una parte de ella </span>{" "}
+                </h3>
+                <p style={{ marginBottom: '1rem' }}></p>
                 <p className="primary neutral-bottom">
-                  Buy shares of rental properties, earn monthly income, and
-                  watch your money grow
+                Compra fracciones de propiedades en alquiler, gana ingresos mensuales y mira cómo crece tu dinero
                 </p>
-                <div className="hero__cta__group">
-                  <Link href="/property" className="button button--effect">
-                    Start Exploring
+                <p style={{ marginBottom: '2rem' }}></p>
+
+                
+             
+            
+
+                {/* Botones call to Action */}
+                <div className="hero__cta__group style={{ marginTop: 'auto' }} " > 
+                  <Link href="/property" className="button button--effect" style={{backgroundColor: '#3D8AA9'}} >
+                    
+                    Buscar Propiedad
                   </Link>
                   <Link
                     href="/business-loan"
                     className="button button--secondary button--effect"
                   >
-                    Get Funding
+                    Que es LotusFraction?
                   </Link>
                 </div>
               </div>
             </div>
+             {/* Botones call to Action */}
+
+            {/* Este comentario no se verá en el navegador */}
             <div className="col-lg-6 col-xxl-6 offset-xxl-1">
               <div className="hero__illustration d-none d-lg-block">
                 <Image

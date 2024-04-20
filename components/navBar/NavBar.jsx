@@ -48,8 +48,9 @@ const NavBar = () => {
               <Link
                 href="/registration"
                 className="button button--effect d-none d-sm-inline-flex"
+                style={{backgroundColor: "#3D8AA9"}} 
               >
-              Encuentra la inversion ideal 
+              Buscar propiedades 
               <HiSearch className="fs-4" />
               </Link>
             </div>
