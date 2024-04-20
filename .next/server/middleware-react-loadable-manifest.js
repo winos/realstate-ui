@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"components/dashboard/home/Chart.jsx -> react-apexcharts\":{\"id\":\"components/dashboard/home/Chart.jsx -> react-apexcharts\",\"files\":[\"static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{}"
