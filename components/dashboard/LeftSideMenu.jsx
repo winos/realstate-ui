@@ -34,6 +34,7 @@ const LeftSideMenu = ({ activSidebar, setActivSidebar }) => {
               ["Transactions", "/dashboard/transaction", transactions],
               ["Withdraw", "/dashboard/withdraw", withdraw],
               ["Account", "/dashboard/account", account],
+              ["Property", "/dashboard/property", account],
             ].map(([item, url, icon], i) => (
               <li key={item}>
                 <Link
