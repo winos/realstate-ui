@@ -48,7 +48,7 @@ const Footer = () => {
             <div className="col-md-12 col-lg-4 col-xl-4">
               <div className="footer__intro">
                 <Link href="/">
-                  <Image src={logoLight} alt="logoLight" />
+                  <Image src={logoLight} alt="logoLight"  className="logo-max-height" />    
                 </Link>
                 <p>
                   Revest is a platform offering anyone the ability to invest and

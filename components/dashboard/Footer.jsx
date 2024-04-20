@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="col-md-12 col-lg-4 col-xl-4">
               <div className="footer__intro">
                 <Link href="/">
-                  <Image src={logo} alt="logo" />
+                <Image src={logo} alt="Logo" className="logo-max-height" />
                 </Link>
                 <p>
                   <i className="fa-solid fa-location-dot"></i>1134 W Hubbard St.
